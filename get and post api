@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "6b860a5d-8362-49aa-b0d6-55ab1644d09a",
+		"name": "themoviedb calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23019594"
+	},
+	"item": [
+		{
+			"name": "get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/popular?api_key=f3ebcb2a737d37f1ce8603fd722bc96b&language=en-US&page=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"popular"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "f3ebcb2a737d37f1ce8603fd722bc96b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
